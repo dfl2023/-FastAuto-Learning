@@ -18,7 +18,7 @@ from torch.nn import TransformerEncoderLayer
 from torch_position_embedding import PositionEmbedding
 
 
-class FocalLoss(nn.modules.loss._WeightedLoss):
+class FocalLoss(nn.modules.loss._WeightedLoss): #loss design
     def __init__(self, weight=None, gamma=2, reduction='mean'):
         super(FocalLoss, self).__init__(weight, reduction=reduction)
         self.gamma = gamma
